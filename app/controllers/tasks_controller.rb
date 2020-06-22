@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @q = current_user.tasks.ransack(params[:q])
-  	@tasks = @q.result(distinct: true).recent
+    @tasks = @q.result(didtinct: true)
   end
 
   def show
